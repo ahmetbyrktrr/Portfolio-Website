@@ -24,6 +24,7 @@ export default function ProjectCard({ project }) {
         <p>{project.description}</p>
         <div className="project-meta">
           <span>{project.tech}</span>
+          {project.tech2?.trim() && <span>{project.tech2}</span>}{project.tech3?.trim() && <span>{project.tech3}</span>}{project.tech4?.trim() && <span>{project.tech4}</span>}{project.tech5?.trim() && <span>{project.tech5}</span>}{project.tech6?.trim() && <span>{project.tech6}</span>}
         </div>
       </div>
 

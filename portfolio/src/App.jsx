@@ -113,17 +113,17 @@ export default function App() {
               <br />
               Ahmet Bayraktar
             </h1>
-            <p className="eyebrow">Front-end Developer</p>
+            <p className="eyebrow">Developer</p>
             <h2>I build simple, clean, and functional interfaces.</h2>
             <p>
-              A developer blazing their own trail in the digital world. I welcome users on the bright side of front-end development and build systems in the depths of back-end development. I’m a solution-oriented tech enthusiast who learns something new with every line of code.
+              A developer blazing their own trail in the digital world. I welcome users on the bright side of front-end development and build systems in the depths of back-end development.
             </p>
             <button
               type="button"
               className="cta-button"
               onClick={() => scrollToSection(sectionIds.projects)}
             >
-              Learn More ↓
+              Explore Portfolio ↓
             </button>
           </div>
 
@@ -139,7 +139,8 @@ export default function App() {
         <section className="section section--muted" id={sectionIds.projects}>
           <div className="section-heading">
             <p className="eyebrow">My Projects</p>
-            <h2>When I want it, I build it.</h2>
+            <h2>Real-World Projects, Real Solutions</h2>
+            <h4>Each project reflects my approach to clean code, performance, and user experience.</h4>
           </div>
 
           <div className="projects-slider">
@@ -182,7 +183,7 @@ export default function App() {
         <section className="section" id={sectionIds.skills}>
           <div className="section-heading">
             <p className="eyebrow">Skills</p>
-            <h2>Interactive UI work backed by practical front-end habits.</h2>
+            <h2>Skills & Technologies I Work With</h2>
           </div>
 
           <div className="skills-panel">
@@ -198,7 +199,6 @@ export default function App() {
                   role="tab"
                   aria-selected={skill.id === activeSkill}
                 >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   {skill.label}
                 </button>
               ))}
@@ -207,6 +207,7 @@ export default function App() {
             <div className="skills-content" role="tabpanel">
               <h3>{currentSkill.title}</h3>
               <p>{currentSkill.text}</p>
+              <p class="tech">{currentSkill.tech}</p>
             </div>
           </div>
         </section>
@@ -217,10 +218,10 @@ export default function App() {
             <h2>Learning through study, repetition, and real interface work.</h2>
           </div>
           <p className="education-copy">
-            I improve by rebuilding interfaces, practicing responsive design,
-            and turning concepts into complete front-end experiences. Each
-            project helps me strengthen both visual judgment and implementation
-            discipline.
+            The academic education I received in the Computer Engineering department at Üsküdar University provided me with a solid engineering foundation and strong analytical thinking skills. However, to keep up with the rapidly evolving software industry, I went beyond my formal education by continuously improving myself in modern frontend libraries and backend architectures through platforms like Udemy and YouTube.
+            <br />
+            <br />
+            During my internships, I had the opportunity to apply my theoretical knowledge to real-world projects, gaining valuable hands-on experience. Today, I actively integrate these experiences into every line of code I write, striving to build efficient, maintainable, and user-focused solutions.
           </p>
         </section>
 

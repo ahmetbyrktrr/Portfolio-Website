@@ -1,15 +1,19 @@
 :root {
   color-scheme: light;
-  --bg: #f5efe6;
-  --surface: rgba(255, 255, 255, 0.78);
-  --surface-strong: #fffaf3;
-  --text: #1e2430;
-  --muted: #5f6b7a;
-  --line: rgba(30, 36, 48, 0.1);
-  --accent: #d85c3f;
-  --accent-deep: #ab3d23;
-  --accent-soft: #f4cbbf;
-  --shadow: 0 24px 60px rgba(51, 40, 31, 0.12);
+
+  --bg: #eef4fb;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: #f7fbff;
+
+  --text: #1b2a3a;
+  --muted: #5c6f82;
+  --line: rgba(27, 42, 58, 0.08);
+
+  --accent: #5aa9ff;
+  --accent-deep: #2f7dd1;
+  --accent-soft: #cfe6ff;
+
+  --shadow: 0 24px 60px rgba(30, 60, 120, 0.12);
 }
 
 * {
@@ -25,17 +29,9 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(
-      circle at top left,
-      rgba(216, 92, 63, 0.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at top right,
-      rgba(77, 141, 217, 0.18),
-      transparent 24%
-    ),
-    linear-gradient(180deg, #f9f3ea 0%, #f3eadf 100%);
+    radial-gradient(circle at top left, rgba(90, 169, 255, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(120, 190, 255, 0.18), transparent 24%),
+    linear-gradient(180deg, #f5f9ff 0%, #eaf3ff 100%);
 }
 
 button,
@@ -130,7 +126,7 @@ img {
 }
 
 .nav-button:hover {
-  background: rgba(216, 92, 63, 0.12);
+  background: rgba(90, 169, 255, 0.12);
   color: var(--accent-deep);
   transform: translateY(-1px);
 }
@@ -177,8 +173,10 @@ img {
   margin: 0 0 1rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.78rem;
+  font-size: 1.40rem;
   color: var(--accent-deep);
+  margin: 16px;
+  font-weight: bold;
 }
 
 .cta-button,
@@ -195,7 +193,7 @@ img {
   background: var(--accent);
   color: white;
   padding: 1rem 1.4rem;
-  box-shadow: 0 16px 28px rgba(216, 92, 63, 0.28);
+  box-shadow: 0 16px 28px rgba(90, 169, 255, 0.3);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -203,7 +201,7 @@ img {
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 32px rgba(216, 92, 63, 0.34);
+  box-shadow: 0 20px 32px rgba(90, 169, 255, 0.4);
 }
 
 .hero-visual {
@@ -215,14 +213,14 @@ img {
 .hero-orbit {
   position: absolute;
   inset: 8% 6%;
-  border: 1px dashed rgba(30, 36, 48, 0.18);
+  border: 1px dashed rgba(2, 22, 61, 0.18);
   border-radius: 44% 56% 58% 42% / 44% 35% 65% 56%;
   animation: spin 20s linear infinite;
 }
 .hero-orbit2 {
   position: absolute;
   inset: 8% 6%;
-  border: 1px dashed rgba(129, 64, 4, 0.18);
+  border: 1px dashed rgba(8, 18, 193, 0.18);
   border-radius: 37% 55% 53% 32% / 37% 32% 55% 53%;
   animation: spin 20s alternate-reverse infinite;
 }
@@ -249,7 +247,7 @@ img {
 }
 
 .section-heading {
-  max-width: 48rem;
+  max-width: 60rem;
   margin-bottom: 2.5rem;
 }
 
@@ -319,9 +317,11 @@ img {
 }
 
 .project-meta span {
+  font-size: small;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: rgba(216, 92, 63, 0.1);
+  background: rgba(90, 169, 255, 0.12);
+  color: var(--accent-deep);
 }
 
 .project-gallery {
@@ -329,7 +329,7 @@ img {
   min-height: 26rem;
   overflow: hidden;
   border-radius: 1.5rem;
-  background: linear-gradient(180deg, #fffdf9 0%, #efe5d8 100%);
+  background: rgba(90, 169, 255, 0.12);
 }
 
 .project-gallery img {
@@ -419,7 +419,7 @@ img {
 
 .skills-tab--active {
   transform: translateY(-2px);
-  box-shadow: 0 14px 24px rgba(30, 36, 48, 0.1);
+  box-shadow: 4px 6px 4px rgba(15, 18, 23, 0.377);
 }
 
 .skills-tab--sky {
@@ -446,6 +446,15 @@ img {
   background: #88d8ff;
 }
 
+.skills-tab--nightblue {
+  background: #0876a9;
+}
+
+
+.skills-tab--softblue {
+  background: #b4e7ff;
+}
+
 .skills-content {
   padding: 1rem 0.5rem 0.5rem;
 }
@@ -461,8 +470,18 @@ img {
   line-height: 1.8;
 }
 
+.tech {
+    font-size: small;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(90, 169, 255, 0.12);
+    color: var(--accent-deep);
+    box-sizing: border-box;
+    width: fit-content;
+}
+
 .education-copy {
-  max-width: 54rem;
+  /* max-width: 54rem; */
   font-size: 1.1rem;
 }
 
