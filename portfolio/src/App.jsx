@@ -259,7 +259,7 @@ export default function App() {
       </main>
 
       <footer className="footer" id={sectionIds.contact}>
-        <p className="eyebrow">Contact</p>
+        <p className="eyebrow">Contact Me</p>
         <div className="footer-links">
           {contactLinks.map((link) => (
             <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
